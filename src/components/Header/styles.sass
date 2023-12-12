@@ -1,0 +1,66 @@
+.header__
+    &block
+        display: flex
+        padding: 2rem 4rem
+        flex-direction: row
+        align-items: center
+
+        box-shadow: #6d6d6d 0px 3px 12px 1px
+
+        position: sticky
+        top: 0
+        background-color: #fff
+
+        z-index: 100
+
+    &logo 
+        height: 4rem
+
+    &title 
+        font-size: 1.8rem
+        font-family: Montserrat
+        text-transform: uppercase
+        text-align: center
+        width: 70%
+
+    &landscape_active
+        display: none
+
+@media (max-width: 600px)
+    .header__
+        &block
+            width: 100%
+            padding: 2rem 0
+
+            justify-content: center
+
+        &logo 
+            height: auto
+            width: 20rem
+
+        &title 
+            display: none
+
+@media (max-width: 800px) and (orientation: landscape)
+  .header__
+        &block
+            display: none
+
+        &landscape_active
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 100dvw
+            height: 100dvh
+            background-color: #777
+            color: #fff
+            font-size: 1.5rem
+
+            display: flex
+            justify-content: center
+            align-items: center
+
+            img
+                height: 1.25rem
+                margin-left: 0.5rem

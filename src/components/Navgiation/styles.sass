@@ -1,0 +1,118 @@
+.navigation__
+
+    &container
+        background-color: #f1f1f1
+        font-family: Montserrat
+        
+        width: 26rem
+        font-size: 1.5rem
+        font-family: Montserrat 
+        box-shadow: #6d6d6d 3px 3px 12px 1px
+        border: 1px solid #c2c2c2
+        margin-top: 2rem
+        border-top-right-radius: 1.25rem
+        border-bottom-right-radius: 1.25rem
+        font-weight: 600
+
+        position: fixed
+        left: 0
+
+        max-height: 70dvh
+        overflow-y: auto
+
+        z-index: 100
+
+        &::-webkit-scrollbar 
+            width: 0.35rem              
+
+        &::-webkit-scrollbar-track 
+            background: #FFF0 
+            margin-top: 1rem
+            margin-bottom: 1rem
+        
+        &::-webkit-scrollbar-thumb 
+            background-color: #aaa   
+            border-radius: 0.5rem       
+            border: 0  
+
+    &list
+        background-color: #fff
+        margin: 0
+        transition: .5s
+        list-style-type: none
+        padding-right: 1rem
+        overflow: hidden
+        max-height: 100rem
+        border-bottom: 1px solid #000
+        padding-left: 3rem
+
+        font-weight: 500
+        font-size: 1.25rem
+
+        &__item
+            padding: 0.75rem 0 0.5rem
+            cursor: pointer
+
+            &:hover
+                font-weight: 800
+
+            &_active
+                font-weight: 800
+
+        &__not-active
+            max-height: 0
+            border-bottom: 1px solid #FFF
+
+        &:last-child
+            border-top: 1px solid #000
+            border-bottom: 0
+        
+        &__not-active:last-child
+            border-top: 0
+
+    &section 
+        padding: 1rem 2rem
+        border-bottom: 1px solid #000
+
+        cursor: pointer
+
+        &:nth-child(5)
+            border-bottom: 0
+
+@media (max-width: 600px)
+    .navigation__
+
+        &container
+            display: block
+            position: absolute
+            bottom: 0
+            width: 100%
+            background-color: #f1f1f1
+            
+            font-size: 1rem
+            box-shadow:  #a8a8a8 -3px 0px 6px 1px
+            border: 0
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+
+            position: fixed
+            left: 0
+
+            max-height: 100dvh
+
+        &list
+            border-bottom: 1px solid #000
+
+            font-weight: 500
+            font-size: 0.9rem
+
+            &__item
+                padding: 1rem 0 1rem
+
+            &__not-active
+                border-bottom: 1px solid #f1f1f1
+
+@media (max-width: 800px) and (orientation: landscape)
+  .navigation__
+        &container
+            display: none

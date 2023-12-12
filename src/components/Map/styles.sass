@@ -1,0 +1,26 @@
+.map__
+
+    &container 
+
+    &block 
+        margin-top: -1rem
+        background-color: #fff
+        height: 85dvh
+        transform: rotateZ(90deg)
+
+    &element
+        &:hover
+            filter: saturate(2000%)
+
+@media (max-width: 600px)
+    .map__
+        &block 
+            margin-top: 2rem
+            width: auto
+            height: 55dvh
+            transform: rotateZ(0deg)
+
+@media (max-width: 800px) and (orientation: landscape)
+  .map__
+        &container 
+            display: none
